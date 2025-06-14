@@ -1,4 +1,4 @@
-/* Reset & base */
+
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header Section */
 .header {
   background-color: #004080;
   color: white;
@@ -47,7 +46,6 @@ body {
   color: #ffcc00;
 }
 
-/* Hero Section */
 .hero {
    
   background: url(file-20210311-21-1ikj6qu.avif) no-repeat;
@@ -84,7 +82,6 @@ body {
   background-color: #e6b800;
 }
 
-/* First Years Section */
 .first-years {
   padding: 60px 20px;
   max-width: 1100px;
@@ -125,7 +122,6 @@ body {
   color: #555;
 }
 
-/* Footer */
 footer {
   background-color: #004080;
   color: white;
@@ -135,7 +131,6 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsive */
 @media (max-width: 600px) {
   .header {
     flex-direction: column;
