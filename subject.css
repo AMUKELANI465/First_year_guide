@@ -51,47 +51,8 @@ body {
 }
 
 
-.hero {
-  background: url(pexels-zen-chung-5538634.jpg) no-repeat center center/cover;
-  background-color: gray;
-  background-attachment: fixed;
-  height: 90vh;
-  width: 100%;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 0 1rem;
-}
 
-.hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: whitesmoke;
-}
-
-.hero div a {
-  text-decoration: none;
-  background: white;
-  color: black;
-  padding: 12px 24px;
-  border-radius: 12px;
-  font-weight: bold;
-  transition: background 0.3s;
-}
-
-.hero div a:hover {
-  background: lightgray;
-}
 
 
 .first-years {
@@ -139,8 +100,6 @@ footer {
   align-items: center;
   padding: 1rem;
 }
-
-
 @media (max-width: 768px) {
   .header {
     flex-direction: row;
@@ -148,23 +107,5 @@ footer {
     height: 20vh;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-  }
-
-  #nav-bar {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .hero div a {
-    font-size: 0.9rem;
-    padding: 10px 20px;
   }
 }
