@@ -181,6 +181,11 @@ body {
   }
   .logo{
     padding-bottom: 1px;
+    
+  }
+  .logo img{
+    height: 10vh;
+    width: 50%;
   }
 
 
