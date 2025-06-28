@@ -1,0 +1,25 @@
+{
+  "name": "first_year_guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AMUKELANI465/First_year_guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AMUKELANI465/First_year_guide/issues"
+  },
+  "homepage": "https://github.com/AMUKELANI465/First_year_guide#readme",
+  "dependencies": {
+    "@capacitor/cli": "^7.4.0",
+    "@capacitor/core": "^7.4.0"
+  }
+}
