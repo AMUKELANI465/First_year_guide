@@ -108,7 +108,7 @@ body {
   padding: 1rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 50%;
+ 
 }
 
 .card:hover {
@@ -159,9 +159,13 @@ body {
     align-items: flex-start;
   }
 
-  .logo {
-    margin-bottom: 0.5rem;
+  .logo a {
+   margin-bottom: 0.5rem;
+    
+   
+
   }
+   
 }
 
 @media (max-width: 480px) {
@@ -183,6 +187,10 @@ body {
 
   .card p {
     font-size: 0.95rem;
+  }
+  .nav-links a{
+    display: flex;
+    
   }
 }
 
