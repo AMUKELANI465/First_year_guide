@@ -3,76 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="game.css">
 <title>TVET GUIDE</title>
-<style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f0f0f0;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-  }
 
-  h1 {
-    margin: 10px 0;
-  }
-
-  #score, #timer {
-    font-size: 1.2rem;
-    margin: 5px 0;
-  }
-
-  #gameArea {
-    flex: 1;
-    position: relative;
-    overflow: hidden;
-  }
-
-.gameButton {
-  position: absolute;
-  padding: clamp(8px, 2vw, 14px) clamp(12px, 3vw, 18px);
-  font-size: clamp(12px, 3vw, 16px);
-  max-width: 20vw; 
-  max-height: 12vh; 
-  word-wrap: break-word;
-}
-   @media (max-width: 480px) {
-  .gameButton {
-    padding: 6px 10px;
-    font-size: 12px;
-  }
-}
-  .gameButton:active {
-    background: #007acc;
-  }
-
-  #overlay {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.7);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: white;
-    font-size: 1.3rem;
-  }
-
-  #restartBtn {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background: #28a745;
-    border: none;
-    color: white;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-</style>
 </head>
 <body>
 
@@ -88,86 +21,8 @@
   <a id="restartBtn" href="landing.html" style="text-decoration: none;">Exit Game</a>
 </div>
 
-<script>
-  let remaining = 100;
-  let time = 30;
-  let timerId;
 
-  const scoreDisplay = document.getElementById('score');
-  const timerDisplay = document.getElementById('timer');
-  const gameArea = document.getElementById('gameArea');
-  const overlay = document.getElementById('overlay');
-  const finalMessage = document.getElementById('finalMessage');
-  const restartBtn = document.getElementById('restartBtn');
-
-  // Create 100 buttons
-  function createButtons() {
-    gameArea.innerHTML = "";
-    for (let i = 1; i <= 100; i++) {
-      const btn = document.createElement("button");
-      btn.textContent = i;
-      btn.className = "gameButton";
-
-      // random position
-      const maxX = gameArea.clientWidth - 60;
-      const maxY = gameArea.clientHeight - 40;
-      btn.style.left = Math.random() * maxX + "px";
-      btn.style.top = Math.random() * maxY + "px";
-
-      btn.addEventListener("click", () => {
-        btn.remove();
-        remaining--;
-        scoreDisplay.textContent = "Remaining: " + remaining;
-        if (remaining === 0) {
-          endGame(true);
-        }
-      });
-
-      gameArea.appendChild(btn);
-    }
-  }
-
-  // Start timer
-  function startTimer() {
-    timerId = setInterval(() => {
-      time--;
-      timerDisplay.textContent = "Time: " + time + "s";
-      if (time <= 0) {
-        endGame(false);
-      }
-    }, 1000);
-  }
-
-  // End game
-  function endGame(won) {
-    clearInterval(timerId);
-    overlay.style.display = "flex";
-    if (won) {
-      finalMessage.textContent = " You Win! All buttons cleared!";
-    } else {
-      finalMessage.textContent = " Time's up! Missed " + remaining + " buttons.";
-    }
-  }
-
-  // Restart game
-  function restartGame() {
-    remaining = 100;
-    time = 30;
-    scoreDisplay.textContent = "Remaining: 100";
-    timerDisplay.textContent = "Time: 30s";
-    overlay.style.display = "none";
-    createButtons();
-    startTimer();
-  }
-  
-
-
-  restartBtn.addEventListener("click", restartGame);
-
-  // Start when page loads
-  window.onload = restartGame;
-</script>
-
+<script src="game.js"></script>
 </body>
 </html>
 
