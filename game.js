@@ -53,9 +53,9 @@
     clearInterval(timerId);
     overlay.style.display = "flex";
     if (won) {
-      finalMessage.textContent = " You Win! All buttons cleared!";
+      finalMessage.textContent = " You win ! , All buttons have been cleared ";
     } else {
-      finalMessage.textContent = " Time's up! Missed " + remaining + " buttons.";
+      finalMessage.textContent = " Time's up! You Missed " + remaining + " buttons.";
     }
   }
 
@@ -69,7 +69,11 @@
     createButtons();
     startTimer();
   }
-  
+
+  var h1 = document.querySelector(".challenge");
+  h1.addEventListener("click", function (){
+    h1.innerHTML = "One Hundred Button Challenge";
+  });
 
 
   restartBtn.addEventListener("click", restartGame);
